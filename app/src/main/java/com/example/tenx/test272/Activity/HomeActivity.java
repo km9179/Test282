@@ -8,6 +8,8 @@ import android.os.Bundle;
 import com.example.tenx.test272.Activity.Adapters.FragmentAdapter;
 import com.example.tenx.test272.R;
 
+import java.util.Objects;
+
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -27,10 +29,10 @@ public class HomeActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.contaier_view_pager);
         viewPager.setAdapter(fragAdapter);
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.tablayout_icon_home);
-        tabLayout.getTabAt(1).setIcon(R.drawable.tablayout_icon_whatshot);
-        tabLayout.getTabAt(2).setIcon(R.drawable.tablayout_icon_notifications);
 
+        Objects.requireNonNull(tabLayout.getTabAt(0)).setIcon(R.drawable.tablayout_icon_home);
+        Objects.requireNonNull(tabLayout.getTabAt(1)).setIcon(R.drawable.tablayout_icon_whatshot);
+        Objects.requireNonNull(tabLayout.getTabAt(2)).setIcon(R.drawable.tablayout_icon_notifications);
 
 
 
