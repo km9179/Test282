@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/relative_layout"
+    android:layout_height="@dimen/app_bar_height">
+    <TextView
+        android:id="@+id/slide_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:text="test_text"
+        android:textSize="40sp"
+        tools:background="#d17777"
+        />
+
+</RelativeLayout>
