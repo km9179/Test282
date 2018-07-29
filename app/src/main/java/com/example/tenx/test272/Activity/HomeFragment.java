@@ -3,6 +3,7 @@ package com.example.tenx.test272.Activity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -31,7 +32,7 @@ public class HomeFragment extends Fragment{
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         viewPager = view.findViewById(R.id.home_view_pager);
@@ -45,7 +46,7 @@ public class HomeFragment extends Fragment{
         final Runnable update = new Runnable() {
             @Override
             public void run() {
-                if(current_page == NUM_PAGES - 1){
+                if(current_page == NUM_PAGES){
                     current_page = 0;
                 }
                 viewPager.setCurrentItem(current_page++, true);
