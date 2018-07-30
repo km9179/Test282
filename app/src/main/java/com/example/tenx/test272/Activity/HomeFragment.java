@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.tenx.test272.Activity.Adapters.CustomAdapter;
+import com.example.tenx.test272.Activity.Adapters.HomePagerAdapter;
 import com.example.tenx.test272.R;
 
 import java.util.Timer;
@@ -21,7 +21,7 @@ import java.util.TimerTask;
 public class HomeFragment extends Fragment{
 
     ViewPager viewPager;
-    CustomAdapter customAdapter;
+    HomePagerAdapter homePagerAdapter;
     TabLayout tabLayout;
     Timer timer;
 
@@ -36,8 +36,8 @@ public class HomeFragment extends Fragment{
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         viewPager = view.findViewById(R.id.home_view_pager);
-        customAdapter = new CustomAdapter(getActivity());
-        viewPager.setAdapter(customAdapter);
+        homePagerAdapter = new HomePagerAdapter(getActivity());
+        viewPager.setAdapter(homePagerAdapter);
 
 
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -42,70 +43,120 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
                 >
-                <TextView
+                <RelativeLayout
                     android:id="@+id/home_icon_r1c1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_alignParentStart="true"
-                    android:text="@string/title_r1c1"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:background="@drawable/circle_background_yellow"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
-                    />
-                <TextView
+                    >
+                    <ImageView
+                        android:id="@+id/icon1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:contentDescription="?attr/icon"
+                        android:src="@drawable/icon_events_24dp"
+                        android:background="@drawable/circle_background_yellow"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic1_title"
+                        android:textStyle="bold"
+                        android:layout_below="@id/icon1"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
                     android:id="@+id/home_icon_r1c2"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:text="@string/title_r1c2"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:background="@drawable/circle_background_yellow"
                     android:layout_alignParentEnd="true"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
-                    />
+                    >
+                    <ImageView
+                        android:id="@+id/icon2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/icon_workshop_24dp"
+                        android:background="@drawable/circle_background_yellow"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="?attr/icon"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic2_title"
+                        android:layout_below="@id/icon2"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        />
+                </RelativeLayout>
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp"
                 >
-                <TextView
-                    android:id="@+id/home_icon_r2c1"
+            <RelativeLayout
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_alignParentStart="true"
-                    android:background="@drawable/circle_background_yellow"
-                    android:text="@string/title_r2c1"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:fontFamily="sans-serif-condensed"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
-                    />
-                <TextView
-                    android:id="@+id/home_icon_r2c2"
+                    >
+                    <ImageView
+                        android:id="@+id/icon3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/icon_modules_24dp"
+                        android:background="@drawable/circle_background_yellow"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="?attr/icon"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic3_title"
+                        android:textStyle="bold"
+                        android:layout_below="@id/icon3"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/circle_background_yellow"
-                    android:text="@string/title_r2c2"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:fontFamily="sans-serif-condensed"
                     android:layout_alignParentEnd="true"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
-                    />
+                    >
+                    <ImageView
+                        android:id="@+id/icon4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/icon_spark_24dp"
+                        android:background="@drawable/circle_background_yellow"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="?attr/icon"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_ic4_title"
+                        android:layout_below="@id/icon4"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        />
+                </RelativeLayout>
             </RelativeLayout>
-
-
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

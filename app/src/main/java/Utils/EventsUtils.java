@@ -5,13 +5,12 @@ import java.util.List;
 import java.util.Map;
 
 public class EventsUtils {
-    public static String[] upcomingEvents= {"UpcomingEvent1", "UpcomingEvent2","UpcomingEvent3","UpcomingEvent4"};
-    public static String[] backgroundColors = {"#b9f6ca","#f9a825", "#ff9e80","#FF818DD7"};
     public static String[] mainEventsImageUrl = {"https://pbs.twimg.com/media/DLeVx-ZUIAAo6Ad.jpg",
             "https://pbs.twimg.com/media/DMWAJV0VoAQ0BxP.jpg", "https://pbs.twimg.com/media/DMWQZqWU8AAeMGz.png",
             "http://tecnoesis.in/vr/images/Modules/schoolgenius.png",
-    "http://tecnoesis.in/vr/images/Modules/ASME.png",
-    "http://tecnoesis.in/vr/images/Modules/robotron.png"};
+            "http://tecnoesis.in/vr/images/Modules/ASME.png",
+            "http://tecnoesis.in/vr/images/Modules/robotron.png",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCx-XNTe4EaOBnQgfsDDjHD-feNS-qDo3lX134E3SRpA8hj_NO"};
 
     public static String[] notificationList={"This is a test notification 0",
             "This is a test notification 1",
@@ -21,6 +20,13 @@ public class EventsUtils {
             "This is a test notification 5",
             "This is a test notification 6",
             "This is a test notification 7"};
+
+    public static String home_imageUrl[] = {"https://pbs.twimg.com/media/DMZ5H8jU8AAAsU-.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2o4THGSmZC4IDB3OZWNcQgdIo2lQQ1uOnvF2PEqcmFvjOPRT5",
+            "http://tecnoesis.in/vr/images/Modules/ASME.png",
+            "http://tecnoesis.in/vr/images/Modules/robotron.png",
+            "https://pbs.twimg.com/media/DLeVx-ZUIAAo6Ad.jpg",
+            "http://tecnoesis.in/vr/images/Modules/schoolgenius.png"};
 
 
 }

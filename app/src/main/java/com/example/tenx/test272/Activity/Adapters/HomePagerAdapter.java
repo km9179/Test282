@@ -12,39 +12,39 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.tenx.test272.R;
 
 import Utils.EventsUtils;
 
-public class CustomAdapter extends PagerAdapter{
+public class HomePagerAdapter extends PagerAdapter{
     private Context context;
+    private ImageView imgView;
 
-    public CustomAdapter(Context context) {
+    public HomePagerAdapter(Context context) {
         this.context = context;
     }
 
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        String currentEvent = EventsUtils.upcomingEvents[position];
-        String currentBackground = EventsUtils.backgroundColors[position];
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.slide, container, false);
-        TextView eventText = view.findViewById(R.id.slide_text);
-        eventText.setText(currentEvent);
-        eventText.setBackgroundColor(Color.parseColor(currentBackground));
+        imgView = view.findViewById(R.id.home_slide_img);
+        Glide.with(context).load(EventsUtils.home_imageUrl[position]).apply(new RequestOptions().centerCrop()).into(imgView);
         container.addView(view);
         return view;
     }
 
     @Override
     public int getCount() {
-        return EventsUtils.upcomingEvents.length;
+        return EventsUtils.home_imageUrl.length;
     }
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == (RelativeLayout)object;
+        return view == object;
     }
 
     @Override
