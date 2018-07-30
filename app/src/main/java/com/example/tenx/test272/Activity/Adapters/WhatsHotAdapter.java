@@ -3,6 +3,8 @@ package com.example.tenx.test272.Activity.Adapters;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,11 +13,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.tenx.test272.R;
+
+import java.util.Calendar;
 
 import Utils.EventsUtils;
 
@@ -24,7 +27,7 @@ public class WhatsHotAdapter extends RecyclerView.Adapter<WhatsHotAdapter.Custom
 
     private Context context;
 
-    public WhatsHotAdapter(Context context) {
+    public WhatsHotAdapter(Context context ) {
         this.context = context;
     }
 
@@ -47,12 +50,15 @@ public class WhatsHotAdapter extends RecyclerView.Adapter<WhatsHotAdapter.Custom
                 //main view
                 final View mainView = LayoutInflater.from(context).inflate(R.layout.dialog_layout, null);
 
+                //building the dialog
                 builder.setView(mainView);
-                AlertDialog dialog = builder.create();
+                builder.setCancelable(true);
+                final AlertDialog dialog = builder.create();
+
                 ImageView img = mainView.findViewById(R.id.dialog_event_image);
                 TextView tv = mainView.findViewById(R.id.dialog_event_des);
                 Glide.with(context).load(imageUrl).apply(new RequestOptions().centerCrop()).into(img);
-                tv.setText("This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.");
+                tv.setText(context.getResources().getString(R.string.test_desc));
                 dialog.show();
 
                 //implement the share button
@@ -62,7 +68,7 @@ public class WhatsHotAdapter extends RecyclerView.Adapter<WhatsHotAdapter.Custom
                     public void onClick(View view) {
                         Intent shareIntent = new Intent(Intent.ACTION_SEND);
                         shareIntent.setType("text/plain");
-                        String shareBody = "Link to website here";
+                        String shareBody = "http://tecnoesis.in/";
                         shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Tecnoesis");
                         shareIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
                         context.startActivity(Intent.createChooser(shareIntent, "share via"));
@@ -70,17 +76,23 @@ public class WhatsHotAdapter extends RecyclerView.Adapter<WhatsHotAdapter.Custom
                 });
                     //implement web_icon clicks and reminder taps
                 ImageView web = mainView.findViewById(R.id.dialog_icon_web);
-                ImageView rem = mainView.findViewById(R.id.dialog_icon_remind);
+                ImageView closeBtn = mainView.findViewById(R.id.dialog_icon_close);
                 web.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(context, "This will take you to Tecnoesis website.....Soon....!", Toast.LENGTH_SHORT).show();
+                        String eventUrl = "http://tecnoesis.in";
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(eventUrl));
+                        context.startActivity(i);
                     }
                 });
-                rem.setOnClickListener(new View.OnClickListener() {
+
+
+                //reminder button
+                closeBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(context, "This will set a reminder for you.....Soon....!", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
                     }
                 });
 
@@ -106,4 +118,9 @@ public class WhatsHotAdapter extends RecyclerView.Adapter<WhatsHotAdapter.Custom
             layout_holder = itemView.findViewById(R.id.container_whatshot);
         }
     }
-}
+
+
+    }
+
+
+

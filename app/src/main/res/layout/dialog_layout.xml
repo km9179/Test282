@@ -10,31 +10,39 @@
         android:layout_height="250dp"
         android:scaleType="centerCrop"
         android:layout_margin="5dp"
+        tools:src="@drawable/ic_launcher_background"
         />
-    <TextView
-        android:id="@+id/dialog_event_des"
-        android:layout_width="match_parent"
-        android:layout_marginTop="5dp"
-        android:textSize="18sp"
-        android:layout_height="150dp"
-        android:layout_below="@id/dialog_event_image"
-        android:layout_margin="5dp"
-        android:textAlignment="center"
-        tools:text="This is a test description!"
-        />
+ <android.support.v4.widget.NestedScrollView
+     android:id="@+id/scrollView"
+     android:layout_width="match_parent"
+     android:layout_height="150dp"
+     android:layout_below="@id/dialog_event_image"
+     android:layout_margin="5dp">
+     <TextView
+         android:id="@+id/dialog_event_des"
+         android:layout_width="match_parent"
+         android:layout_marginTop="5dp"
+         android:textSize="14sp"
+         android:layout_height="150dp"
+         android:layout_below="@id/dialog_event_image"
+         android:layout_margin="5dp"
+         android:textAlignment="center"
+         tools:text="This is a test description!"
+         />
+ </android.support.v4.widget.NestedScrollView>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_margin="5dp"
-        android:layout_below="@id/dialog_event_des"
+        android:layout_below="@id/scrollView"
         >
         <ImageView
-            android:id="@+id/dialog_icon_remind"
+            android:id="@+id/dialog_icon_close"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginLeft="10dp"
             android:layout_alignParentStart="true"
-            android:src="@drawable/icon_dialog_reminder_24dp"
+            android:src="@drawable/ic_close_black_24dp"
             />
         <ImageView
             android:id="@+id/dialog_icon_web"

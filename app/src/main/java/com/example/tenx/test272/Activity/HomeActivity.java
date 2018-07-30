@@ -33,16 +33,15 @@ public class HomeActivity extends AppCompatActivity {
         Objects.requireNonNull(tabLayout.getTabAt(0)).setIcon(R.drawable.tablayout_icon_home);
         Objects.requireNonNull(tabLayout.getTabAt(1)).setIcon(R.drawable.tablayout_icon_whatshot);
         Objects.requireNonNull(tabLayout.getTabAt(2)).setIcon(R.drawable.tablayout_icon_notifications);
+    }
 
+    @Override
+    public void onBackPressed() {
+        int cur = viewPager.getCurrentItem();
+        if(cur >0){
+            viewPager.setCurrentItem(cur-1);
+        }
 
 
     }
-
-
-
-
-
-
-
-
 }
