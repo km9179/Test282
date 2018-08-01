@@ -1,5 +1,7 @@
 package Utils;
 
+import com.example.tenx.test272.R;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -27,6 +29,10 @@ public class EventsUtils {
             "http://tecnoesis.in/vr/images/Modules/robotron.png",
             "https://pbs.twimg.com/media/DLeVx-ZUIAAo6Ad.jpg",
             "http://tecnoesis.in/vr/images/Modules/schoolgenius.png"};
+
+
+    public static int[] modules_list = {R.drawable.robotron, R.drawable.conferenza, R.drawable.spark};
+    public static String[] homeFragmentsList = {"Events","Workshops","Modules","Spark" };
 
 
 }
