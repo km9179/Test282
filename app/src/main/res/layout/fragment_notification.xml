@@ -12,5 +12,13 @@
         tools:listitem="@layout/recyclerview_item_notif"
         >
     </android.support.v7.widget.RecyclerView>
+    <ToggleButton
+        android:id="@+id/tog_subscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        />
 
 </RelativeLayout>

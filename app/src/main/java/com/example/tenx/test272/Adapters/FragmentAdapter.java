@@ -1,4 +1,4 @@
-package com.example.tenx.test272.Activity.Adapters;
+package com.example.tenx.test272.Adapters;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;

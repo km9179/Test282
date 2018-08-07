@@ -1,17 +1,16 @@
-package com.example.tenx.test272.Activity.Adapters;
+package com.example.tenx.test272.Adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.view.ViewGroup;
 
 import com.example.tenx.test272.Activity.FragmentEvents;
 import com.example.tenx.test272.Activity.FragmentModules;
 import com.example.tenx.test272.Activity.FragmentSpark;
 import com.example.tenx.test272.Activity.FragmentWorkshops;
 
-import Utils.EventsUtils;
+import com.example.tenx.test272.Utils.EventsUtils;
 
 public class HomeFragmentPagerAdapter extends FragmentPagerAdapter{
     private Context context;

@@ -1,9 +1,8 @@
-package com.example.tenx.test272.Activity.Adapters;
+package com.example.tenx.test272.Adapters;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -18,9 +17,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.tenx.test272.R;
 
-import java.util.Calendar;
-
-import Utils.EventsUtils;
+import com.example.tenx.test272.Utils.EventsUtils;
 
 public class WhatsHotAdapter extends RecyclerView.Adapter<WhatsHotAdapter.CustomViewHolder>{
 

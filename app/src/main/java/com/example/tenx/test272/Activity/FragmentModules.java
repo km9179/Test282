@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.tenx.test272.Activity.Adapters.CustomModulesAdapter;
+import com.example.tenx.test272.Adapters.CustomModulesAdapter;
 import com.example.tenx.test272.R;
 
 public class FragmentModules extends Fragment{

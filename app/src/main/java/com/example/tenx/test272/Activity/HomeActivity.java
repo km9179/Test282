@@ -1,14 +1,21 @@
 package com.example.tenx.test272.Activity;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.graphics.PorterDuff;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.tenx.test272.Activity.Adapters.FragmentAdapter;
+import com.example.tenx.test272.Adapters.FragmentAdapter;
+import com.example.tenx.test272.DatabaseElements.Models.Notification;
+import com.example.tenx.test272.DatabaseElements.ViewModels.AppViewModel;
 import com.example.tenx.test272.R;
+import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.util.List;
 import java.util.Objects;
 
 
@@ -19,10 +26,16 @@ public class HomeActivity extends AppCompatActivity {
     FragmentAdapter fragAdapter;
     ViewPager viewPager;
 
+    AppViewModel viewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+
+
+
 
         //setting up the tablayout and viewPager
         fragAdapter = new FragmentAdapter(getSupportFragmentManager());

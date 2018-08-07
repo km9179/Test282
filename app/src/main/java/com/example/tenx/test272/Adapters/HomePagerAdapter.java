@@ -1,22 +1,19 @@
-package com.example.tenx.test272.Activity.Adapters;
+package com.example.tenx.test272.Adapters;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.tenx.test272.R;
 
-import Utils.EventsUtils;
+import com.example.tenx.test272.Utils.EventsUtils;
 
 public class HomePagerAdapter extends PagerAdapter{
     private Context context;

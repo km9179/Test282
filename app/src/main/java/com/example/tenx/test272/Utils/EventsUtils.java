@@ -1,10 +1,6 @@
-package Utils;
+package com.example.tenx.test272.Utils;
 
 import com.example.tenx.test272.R;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 public class EventsUtils {
     public static String[] mainEventsImageUrl = {"https://pbs.twimg.com/media/DLeVx-ZUIAAo6Ad.jpg",
