@@ -4,6 +4,7 @@ import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.example.tenx.test272.DatabaseElements.AppRepository;
 import com.example.tenx.test272.DatabaseElements.Models.Notification;
@@ -12,7 +13,8 @@ import com.example.tenx.test272.DatabaseElements.Models.TechEvent;
 import java.util.List;
 
 public class AppViewModel extends AndroidViewModel {
-    private static AppRepository appRepository;
+    private  static AppRepository appRepository;
+    private static final String TAG = "Apprepository";
 
     public AppViewModel(@NonNull Application application) {
         super(application);
@@ -50,7 +52,7 @@ public class AppViewModel extends AndroidViewModel {
     }
 
     public void deleteAllNotifs(){
-        appRepository.deleteAllEvents();
+        appRepository.deleteAllNotif();
     }
     public void deleteNotifById(int _id){
         appRepository.deleteNotifbyID(_id);

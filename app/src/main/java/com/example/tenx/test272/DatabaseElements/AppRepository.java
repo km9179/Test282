@@ -25,7 +25,6 @@ public class AppRepository {
     private static final int NOTIF_DELETE = 1;
     private static final int NOTIF_INSERT = 2;
     private static final int NOTIF_UPDATE = 3;
-    private static final int NOTIF_GETALL = 4;
 
     private static final int EVENT_DELETEALL = 21;
     private static final int EVENT_DELETE_ID = 22;
@@ -33,6 +32,7 @@ public class AppRepository {
     private static final int EVENT_INSERT = 23;
     private static final int EVENT_UPDATE = 24;
     private static final int EVENT_GETALL = 25;
+    private static final String TAG = "AppRepository";
 
 
 
@@ -111,7 +111,6 @@ public class AppRepository {
             }
             if(command == NOTIF_INSERT){
                 notifDao.insert((Notification) objects[0]);
-                Log.d(LOG_TAG,"insert notification called" );
             }
             if(command == NOTIF_UPDATE){
                 notifDao.update((Notification) objects[0]);

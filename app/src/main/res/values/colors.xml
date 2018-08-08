@@ -15,6 +15,8 @@
     <color name="background_lighter_black">#2D2D30</color>
     <color name="tab_highlight">#df4516</color>
     <color name="tab_normal">#e4d0d0</color>
+    <color name="toggle_on">#3ebf17</color>
+    <color name="toggle_off">#dc2f08</color>
 
 
 </resources>

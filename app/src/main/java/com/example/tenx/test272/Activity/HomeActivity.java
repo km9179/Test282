@@ -2,18 +2,24 @@ package com.example.tenx.test272.Activity;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.SharedPreferences;
 import android.graphics.PorterDuff;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.tenx.test272.Adapters.FragmentAdapter;
 import com.example.tenx.test272.DatabaseElements.Models.Notification;
 import com.example.tenx.test272.DatabaseElements.ViewModels.AppViewModel;
 import com.example.tenx.test272.R;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.FirebaseMessagingService;
 
 import java.util.List;
 import java.util.Objects;
@@ -27,14 +33,29 @@ public class HomeActivity extends AppCompatActivity {
     ViewPager viewPager;
 
     AppViewModel viewModel;
+    SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean firstSub = preferences.getBoolean("sub", false);
 
 
+        if(!firstSub){
+            //subscribe to topic all on first boot
+            FirebaseMessaging.getInstance().subscribeToTopic("all").addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    Toast.makeText(HomeActivity.this, "Subscribed to notifications", Toast.LENGTH_SHORT).show();
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean("sub", true);
+                    editor.apply();
+                }
+            });
+        }
 
 
         //setting up the tablayout and viewPager

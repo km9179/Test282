@@ -59,9 +59,6 @@ public abstract class AppDatabase extends RoomDatabase {
         @Override
         protected Void doInBackground(final Void... params) {
             mDao.deleteAll();
-            mDao.insert(new Notification("test 1", 00));
-            mDao.insert(new Notification("test 2", 00));
-            mDao.insert(new Notification("test 3", 00));
             return null;
         }
     }*/
