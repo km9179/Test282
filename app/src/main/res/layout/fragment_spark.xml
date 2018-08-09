@@ -10,9 +10,8 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="40sp"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
         tools:src="@mipmap/ic_launcher"
-
         />
 
 </RelativeLayout>
