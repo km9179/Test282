@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#bcb6b6"
+    android:background="@color/background_lighter_black"
     >
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView_whatshot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/recyclerview_item_whatshot"
+        tools:listitem="@layout/container_event_item"
         >
     </android.support.v7.widget.RecyclerView>
     <android.support.design.widget.FloatingActionButton

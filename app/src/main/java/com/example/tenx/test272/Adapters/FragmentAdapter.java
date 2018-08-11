@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.tenx.test272.Activity.FragmentMenu;
 import com.example.tenx.test272.Activity.FragmentNotifications;
-import com.example.tenx.test272.Activity.FragmentWhatsHot;
+import com.example.tenx.test272.Activity.FragmentHotEvents;
 import com.example.tenx.test272.Activity.FragmentHome;
 
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
     public FragmentAdapter(FragmentManager fm) {
         super(fm);
         fragList.add(new FragmentHome());
-        fragList.add(new FragmentWhatsHot());
+        fragList.add(new FragmentHotEvents());
         fragList.add(new FragmentNotifications());
         fragList.add(new FragmentMenu());
     }
