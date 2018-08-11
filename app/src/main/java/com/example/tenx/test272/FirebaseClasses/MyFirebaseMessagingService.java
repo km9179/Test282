@@ -10,7 +10,7 @@ import android.graphics.Color;
 import android.provider.Settings;
 import android.util.Log;
 
-import com.example.tenx.test272.Activity.WelcomeActivity;
+import com.example.tenx.test272.Activity.LoginActivity;
 import com.example.tenx.test272.DatabaseElements.AppRepository;
 import com.example.tenx.test272.DatabaseElements.Models.Notification;
 import com.example.tenx.test272.R;
@@ -26,12 +26,6 @@ public class MyFirebaseMessagingService extends com.google.firebase.messaging.Fi
     private static final String KEY_TITLE = "title";
     public static final String NOTIFICATION_CHANNEL_ID = "2345";
 
-
-    @Override
-    public void onNewToken(String s) {
-        super.onNewToken(s);
-        Log.e(TAG, s);
-    }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -58,7 +52,7 @@ public class MyFirebaseMessagingService extends com.google.firebase.messaging.Fi
     public void createNotification(String title, String message)
     {
         Context mContext = getApplicationContext();
-        Intent resultIntent = new Intent(mContext , WelcomeActivity.class);
+        Intent resultIntent = new Intent(mContext , LoginActivity.class);
         resultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         PendingIntent resultPendingIntent = PendingIntent.getActivity(mContext,

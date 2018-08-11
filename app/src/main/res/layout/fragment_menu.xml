@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/bg_profile_image"
+        android:layout_margin="6dp"
+        android:orientation="horizontal"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            tools:src="@mipmap/ic_launcher"
+            android:layout_margin="4dp"/>
+        <TextView
+            android:id="@+id/tv_profile_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:text="Mairing Tenx Hojai"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_bg"
+            android:text="logout"
+            android:textColor="@color/text_color"
+            android:layout_marginEnd="30dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

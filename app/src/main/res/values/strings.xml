@@ -26,4 +26,6 @@
         This is a test description.
         This is a test description.</string>
     <string name="menu_item1">RemoveAll</string>
+    <string name="facebook_app_id">216587905680687</string>
+    <string name="fb_login_protocol_scheme">fb216587905680687</string>
 </resources>

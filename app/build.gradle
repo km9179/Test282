@@ -36,10 +36,13 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
     //firebase
-    implementation 'com.google.firebase:firebase-messaging:17.1.0'
     implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.1.0'
+    //authentication
+    implementation 'com.google.firebase:firebase-auth:16.0.2'
 
-    implementation 'com.google.firebase:firebase-database:16.0.1'
+    //facebook
+    implementation 'com.facebook.android:facebook-android-sdk:4.35.0'
 
     // Room components
     implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
@@ -49,6 +52,9 @@ dependencies {
 // Lifecycle components
     implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$rootProject.archLifecycleVersion"
+
+    //lottie
+    implementation 'com.airbnb.android:lottie:2.5.5'
 
 
 }

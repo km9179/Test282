@@ -3,6 +3,7 @@ package com.example.tenx.test272.Adapters;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.tenx.test272.Activity.FragmentMenu;
 import com.example.tenx.test272.Activity.FragmentNotifications;
 import com.example.tenx.test272.Activity.FragmentWhatsHot;
 import com.example.tenx.test272.Activity.FragmentHome;
@@ -19,6 +20,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         fragList.add(new FragmentHome());
         fragList.add(new FragmentWhatsHot());
         fragList.add(new FragmentNotifications());
+        fragList.add(new FragmentMenu());
     }
 
     @Override

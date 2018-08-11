@@ -1,9 +1,0 @@
-<changelist name="added" date="1532820326958" recycled="false">
-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/added/shelved.patch" />
-  <option name="DESCRIPTION" value="added" />
-  <binary>
-    <option name="BEFORE_PATH" value="app/src/main/res/drawable/background.jpg" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
-  </binary>
-</changelist>

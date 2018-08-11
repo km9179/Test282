@@ -1,9 +1,0 @@
-<changelist name="tweak" date="1532953225069" recycled="false">
-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/tweak/shelved.patch" />
-  <option name="DESCRIPTION" value="tweak" />
-  <binary>
-    <option name="BEFORE_PATH" value=".idea/caches/build_file_checksums.ser" />
-    <option name="AFTER_PATH" value=".idea/caches/build_file_checksums.ser" />
-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/tweak/build_file_checksums.ser" />
-  </binary>
-</changelist>
