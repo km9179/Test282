@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.example.tenx.test272.Adapters.HomeFragmentPagerAdapter;
 import com.example.tenx.test272.Adapters.HomePagerAdapter;
+import com.example.tenx.test272.Adapters.Listeners.CircularPagerHandler;
 import com.example.tenx.test272.R;
 
 import java.util.Timer;
@@ -34,7 +35,6 @@ public class FragmentHome extends Fragment{
     int current_page = 0;
     final long DELAY_MS = 500;
     final long PERIOD_MS = 3500;
-    final long NUM_PAGES = 4;
 
     @Nullable
     @Override
@@ -43,6 +43,7 @@ public class FragmentHome extends Fragment{
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         viewPager = view.findViewById(R.id.home_view_pager);
         homePagerAdapter = new HomePagerAdapter(getActivity());
+        viewPager.addOnPageChangeListener(new CircularPagerHandler(viewPager, homePagerAdapter));
         viewPager.setAdapter(homePagerAdapter);
         //appbar
         appBarLayout = view.findViewById(R.id.home_appbar_layout);
@@ -94,24 +95,20 @@ public class FragmentHome extends Fragment{
 
 
 
-
-        final Handler handler = new Handler();
-        final Runnable update = new Runnable() {
+        TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
-                if(current_page == NUM_PAGES){
-                    current_page = 0;
-                }
-                viewPager.setCurrentItem(current_page++, true);
+                viewPager.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        int currentItem = viewPager.getCurrentItem();
+                        viewPager.setCurrentItem(currentItem+1, true);
+                    }
+                });
             }
         };
-        timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                handler.post(update);
-            }
-        }, DELAY_MS, PERIOD_MS);
+        Timer timer = new Timer();
+        timer.schedule(timerTask, 500, 2300);
         return view;
     }
 }

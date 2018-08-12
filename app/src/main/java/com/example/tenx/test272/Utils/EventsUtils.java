@@ -33,12 +33,12 @@ public class EventsUtils {
 
 
 
-    public static String home_imageUrl[] = {"https://pbs.twimg.com/media/DMZ5H8jU8AAAsU-.jpg",
+    public static String home_imageUrl[] = {"http://tecnoesis.in/vr/images/Modules/schoolgenius.png","https://pbs.twimg.com/media/DMZ5H8jU8AAAsU-.jpg",
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2o4THGSmZC4IDB3OZWNcQgdIo2lQQ1uOnvF2PEqcmFvjOPRT5",
             "http://tecnoesis.in/vr/images/Modules/ASME.png",
             "http://tecnoesis.in/vr/images/Modules/robotron.png",
             "https://pbs.twimg.com/media/DLeVx-ZUIAAo6Ad.jpg",
-            "http://tecnoesis.in/vr/images/Modules/schoolgenius.png"};
+            "http://tecnoesis.in/vr/images/Modules/schoolgenius.png","https://pbs.twimg.com/media/DMZ5H8jU8AAAsU-.jpg"};
 
 
     public static int[] modules_list = {R.drawable.robotron, R.drawable.conferenza, R.drawable.spark};
