@@ -68,11 +68,16 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         imgView = findViewById(R.id.iv_loader_image);
         btnLogin = findViewById(R.id.btn_login);
+        printHashKey(this);
+
         imgView.setVisibility(View.VISIBLE);
         btnLogin.setVisibility(View.GONE);
 
+
+
         //lottie animation view
         lottieAnim = findViewById(R.id.lottie_loading);
+        printHashKey(this);
 
 
         //auth
@@ -168,7 +173,21 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-
+    public  void printHashKey(Context pContext) {
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                String hashKey = new String(Base64.encode(md.digest(), 0));
+                Log.i(TAG, "printHashKey() Hash Key: " + hashKey);
+            }
+        } catch (NoSuchAlgorithmException e) {
+            Log.e(TAG, "printHashKey()", e);
+        } catch (Exception e) {
+            Log.e(TAG, "printHashKey()", e);
+        }
+    }
 }
 
 
